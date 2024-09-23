@@ -27,7 +27,7 @@ body{
     cursor: pointer;
 }
 #restart:hover{
-    background-color: #d75050;
+    background-color: #bc3e3e;
     transition: 1s;
 }
 main{

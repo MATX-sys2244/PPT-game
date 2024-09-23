@@ -8,7 +8,7 @@
 }
 
 body{
-    background:linear-gradient(10deg, rgb(51, 51, 51), beige) fixed;
+    background:linear-gradient(10deg, white, beige) fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;

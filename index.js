@@ -6,6 +6,9 @@
 
 
 function jogar(){
+
+    document.getElementById('p1').style.display = 'flex'
+    document.getElementById('p2').style.display = 'flex'
     let maquina = NumeroAleatorio(0,2) // variável responsável pelo computador que vai jogar contra o jogddor
 
     let jogador = document.querySelector('select')
@@ -18,16 +21,28 @@ function jogar(){
     if( (maquina == 0 && jogador.selectedIndex == 2) ||
         (maquina == 2 && jogador.selectedIndex == 1) ||
         (maquina == 1 && jogador.selectedIndex == 0)){
+            document.querySelector('main').style.transition = '1s'
+            document.querySelector('main').style.backgroundColor = '#b91010a4'
+            document.querySelector('main').style.color = 'white'
+            document.querySelector('h4').style.color = 'red'
         resultado('você perdeu ', maquina, `você escolheu (${jogadorTxt})`)
       
             //names()
 
-        } else if (maquina == jogador) {
+        } else if (maquina == jogador.selectedIndex) {
+            document.querySelector('h4').style.color = 'purple'
+            document.querySelector('main').style.backgroundColor = '#503279a1'
+            document.querySelector('main').style.transition = '1s'
+            document.querySelector('main').style.color = 'white'
             resultado('houve um empate ', maquina , `você escolheu (${jogadorTxt})`)
              
             //names()
 
              }else{
+                document.querySelector('main').style.transition = '1s'
+                document.querySelector('main').style.color = 'white'
+                document.querySelector('main').style.backgroundColor= '#53913b62'
+                document.querySelector('h4').style.color = 'green'
             resultado('vencedor ',maquina , `você escolheu (${jogadorTxt})`)
            
             //names()
@@ -55,10 +70,10 @@ function NumeroAleatorio(min, max){
         return (Math.random() * (max - min) + min).toFixed()
 }
 
-    /*function names(){
+    function restart(){
        setTimeout(function pageReload(msg_gbye){ 
         msg_gbye = 'reiniciando o game'
         location.reload()
-        alert('adeus')
-       }, 2000)*/
+        alert(msg_gbye)
+       }, 1000)}
     

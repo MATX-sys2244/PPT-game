@@ -26,6 +26,10 @@ body{
     background-color: #ff000098;
     cursor: pointer;
 }
+#restart:hover{
+    background-color: #d75050;
+    transition: 1s;
+}
 main{
     margin-top: 50px;
     margin-bottom: 30px;
